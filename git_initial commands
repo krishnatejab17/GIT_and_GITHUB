@@ -37,3 +37,19 @@ ssh -T git@github.com
 #To change branch from Master to Main
 git branch -M main
 
+git add <file>              # Stage a specific file
+git add .                   # Stage all changes
+git commit -m "Message"     # Save changes with a message
+git push -u origin main     # Push local commits to GitHub
+git pull origin main        # Fetch and merge changes from GitHub
+git status                  # See current changes
+git log                     # View commit history
+git log --oneline           # Compact history view
+git branch                  # List branches
+git branch <name>           # Create a new branch
+git checkout <name>         # Switch to a branch
+git merge <name>            # Merge a branch into current
+git reset <file>            # Unstage a file
+git reset --soft HEAD~1     # Undo last commit (keep changes)
+git reset --hard HEAD~1     # Undo last commit (discard changes)
+
