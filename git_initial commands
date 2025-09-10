@@ -1,0 +1,39 @@
+#To configure local git to github
+git config --global user.name "Krishnatejab17"
+git config --global user.email "17bdevops@gmail.com"
+
+
+#To check 
+
+git config --global --list
+output:
+user.name=Krishnatejab17
+user.email=17bdevops@gmail.com
+credential.helper=store
+
+#Generate ssh key
+
+ssh-keygen -t ed25519 -C "17bdevops@gmail.com"
+Enter file in which to save the key (/home/krishnatejab17/.ssh/id_ed25519)
+Enter passphrase (empty for no passphrase): 
+Enter same passphrase again: 
+at ~/.ssh/id_ed25519.pub
+
+
+#add it to github
+- Go to GitHub → Settings → SSH and GPG keys
+- Click New SSH key
+- Paste the key into the field
+- Give it a title like "Y4Max Dev Machine" and click Add SSH key
+
+#Test the connection between git and github
+
+ssh -T git@github.com
+
+#link local git to github repo
+-create new github repo (GIT_and_GITHUB)
+-git remote add origin git@github.com:krishnatejab17/my-first-repo.git  (or git remote add origin https://github.com/krishnatejab17/GIT_and_GITHUB)
+
+#To change branch from Master to Main
+git branch -M main
+
